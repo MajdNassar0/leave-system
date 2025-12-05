@@ -1,0 +1,1 @@
+alert("Welcome to Employee Leave Management System :) ");
