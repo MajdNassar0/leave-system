@@ -42,7 +42,7 @@ if(strlen($_SESSION['alogin'])==0){
       <!-- Main Content -->
       <div class="content flex-grow-1">
 
-        <div class="row g-3">
+        <div class="da row g-3">
 
           <!-- Total Registered Employees -->
           <div class="col-lg-4 col-md-6">

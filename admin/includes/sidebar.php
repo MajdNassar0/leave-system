@@ -1,9 +1,9 @@
 <div class="sidebar p-3">
     <div class="img">
-        <img src="">
+        <img src="../assets/img/image.png" class="">
     </div>
     <div class="mb-3">
-        <h5 class="pt-5 mt-2">Admin</h5>
+        <h5 class=" mt-2">Admin</h5>
     </div>
 
     <div class="menu-item">
@@ -49,7 +49,7 @@
         <div class="collapse" id="EmployeesCollapse">
             <ul class="list-unstyled ms-3">
                 <li><a href="AddEmployee.php" class="text-black">Add Employee</a></li>
-                <li><a href="#" class="text-black">Manage Employee</a></li>
+                <li><a href="ManageEmployee.php" class="text-black">Manage Employee</a></li>
             </ul>
         </div>
     </div>
@@ -76,8 +76,8 @@
         </a>
     </div>
 
-    <div class="menu-item text-danger">
-        <a href="logout.php" class="text-black">
+    <div class="menu-item text-danger mb-2">
+        <a href="logout.php" class="text-black  ">
             <i class="bi bi-box-arrow-right me-2"></i> Sign Out
         </a>
     </div>

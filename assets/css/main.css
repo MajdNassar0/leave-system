@@ -58,7 +58,6 @@ main label{
     border-radius: 4px;
     margin-left:  auto;
     margin-right: auto;
-    height: 350px;
 
 }
 
@@ -282,6 +281,9 @@ input:focus {
 .sidebar .menu-item:hover {
     background-color: #e8f0fe;
 }
+.dash .card{
+    height: 200px !important;
+}
 
 
 .content {
@@ -301,11 +303,14 @@ input:focus {
 =================================================*/
 .table-box {
     background: #fff;
-    padding: 25px;
+    padding: 40px;
     width: 100%;
     margin-top: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px #00000015;
+}
+table  {
+  border: 1px solid #eee;
 }
 
 .btn-view {
@@ -360,6 +365,10 @@ select{
 }
 form .cart select{
     border-color: #e2dddd;
+}
+/* img sid */
+.img img{
+    width: 100px;
 }
 
 

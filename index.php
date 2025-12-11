@@ -32,10 +32,7 @@
      <?php
         include 'includes/head.php';
                   
-          if (isset($_POST['signin'])){
-              $username = $_POST["username"];
-              $password = $_POST["password"];
-            } 
+         
         ?>
 
     <!-- main log-in -->
@@ -83,6 +80,7 @@
             </div>
 
             <div class="right-align m-t-sm">
+              
               <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn teal text-white" />
             </div>
           </form>

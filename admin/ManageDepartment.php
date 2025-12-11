@@ -67,7 +67,7 @@
                 <td>HR</td>
                 <td>HR01</td>
                 <td>2023-08-31 17:50:20</td>
-                <td><button onclick="editRow(this)">تعديل</button> <button onclick="deleteRow(this)">حذف</button></td>
+                <td><button onclick="editRow(this)" class="border-0 text-info bg-white"><i class="fa-solid fa-pen"></i></button> <button onclick="deleteRow(this)"  class="border-0 text-info bg-white"><i class="fa-regular fa-trash-can"></i></button></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -75,7 +75,7 @@
                 <td>IT</td>
                 <td>IT01</td>
                 <td>2023-08-31 17:50:56</td>
-                <td><button onclick="editRow(this)">تعديل</button> <button onclick="deleteRow(this)">حذف</button></td>
+                <td><button onclick="editRow(this)" class="border-0 text-info bg-white"><i class="fa-solid fa-pen"></i></button> <button onclick="deleteRow(this)"  class="border-0 text-info bg-white"><i class="fa-regular fa-trash-can"></i></button></td>
               </tr>
               <tr>
                 <td>3</td>
@@ -83,7 +83,7 @@
                 <td>Accounts</td>
                 <td>ACCNT01</td>
                 <td>2023-08-31 17:51:26</td>
-                <td><button onclick="editRow(this)">تعديل</button> <button onclick="deleteRow(this)">حذف</button></td>
+                <td><button onclick="editRow(this)" class="border-0 text-info bg-white"><i class="fa-solid fa-pen"></i></button> <button onclick="deleteRow(this)"  class="border-0 text-info bg-white"><i class="fa-regular fa-trash-can"></i></button></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -91,7 +91,7 @@
                 <td>Admin</td>
                 <td>ADMN01</td>
                 <td>2023-09-01 14:35:50</td>
-                <td><button onclick="editRow(this)">تعديل</button> <button onclick="deleteRow(this)">حذف</button></td>
+                <td><button onclick="editRow(this)" class="border-0 text-info bg-white"><i class="fa-solid fa-pen"></i></button> <button onclick="deleteRow(this)"  class="border-0 text-info bg-white"><i class="fa-regular fa-trash-can"></i></button></td>
               </tr>
             </tbody>
           </table>
