@@ -3,7 +3,7 @@
         <img src="../assets/img/image.png" class="">
     </div>
     <div class="mb-3">
-        <h5 class=" mt-2">Admin</h5>
+        <h5 class=" mt-2 ">Admin</h5>
     </div>
 
     <div class="menu-item">
@@ -25,6 +25,19 @@
             </ul>
         </div>
     </div>
+     <div class="menu-item">
+        <a data-bs-toggle="collapse" data-bs-target="#EmployeesCollapse" role="button"
+           aria-expanded="false" aria-controls="EmployeesCollapse" class="text-black">
+            <i class="bi bi-people me-2"></i> Employees
+        </a>
+
+        <div class="collapse" id="EmployeesCollapse">
+            <ul class="list-unstyled ms-3">
+                <li><a href="AddEmployee.php" class="text-black">Add Employee</a></li>
+                <li><a href="ManageEmployee.php" class="text-black">Manage Employee</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="menu-item">
         <a data-bs-toggle="collapse" data-bs-target="#LeaveTypeCollapse" role="button"
@@ -40,19 +53,7 @@
         </div>
     </div>
 
-    <div class="menu-item">
-        <a data-bs-toggle="collapse" data-bs-target="#EmployeesCollapse" role="button"
-           aria-expanded="false" aria-controls="EmployeesCollapse" class="text-black">
-            <i class="bi bi-people me-2"></i> Employees
-        </a>
-
-        <div class="collapse" id="EmployeesCollapse">
-            <ul class="list-unstyled ms-3">
-                <li><a href="AddEmployee.php" class="text-black">Add Employee</a></li>
-                <li><a href="ManageEmployee.php" class="text-black">Manage Employee</a></li>
-            </ul>
-        </div>
-    </div>
+   
 
     <div class="menu-item">
         <a data-bs-toggle="collapse" data-bs-target="#LeaveManagementCollapse" role="button"
@@ -76,8 +77,8 @@
         </a>
     </div>
 
-    <div class="menu-item text-danger mb-2">
-        <a href="logout.php" class="text-black  ">
+    <div class="menu-item text-danger mb-2 p-5">
+        <a href="#" class="text-black  ">
             <i class="bi bi-box-arrow-right me-2"></i> Sign Out
         </a>
     </div>

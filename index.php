@@ -32,7 +32,7 @@
      <?php
         include 'includes/head.php';
                   
-         
+          
         ?>
 
     <!-- main log-in -->
@@ -79,9 +79,10 @@
               <input id="password" type="password" name="password" placeholder="Enter your password" required />
             </div>
 
-            <div class="right-align m-t-sm">
-              
-              <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn teal text-white" />
+              <div class="right-align m-t-sm">
+              <button type="submit" name="signin" class="waves-effect waves-light btn teal text-white">
+                 <a href="" class="text-white" style="text-decoration: none;">Sign in</a>
+              </button>
             </div>
           </form>
 

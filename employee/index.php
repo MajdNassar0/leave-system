@@ -98,9 +98,9 @@ body {
   <div class="header-box m-5 p-5">
     <img src="../assets/img/image.png" alt="">
     <div>
-      <h3><?= htmlentities($user->FirstName . " " . $user->LastName) ?></h3>
-      <p><i class="fa-solid fa-building"></i> <?= htmlentities($user->Department) ?></p>
-      <p><i class="fa-solid fa-envelope"></i> <?= htmlentities($user->EmailId) ?></p>
+      <h3>Ali Ahmad</h3>
+      <p><i class="fa-solid fa-building"></i> IT </p>
+      <p><i class="fa-solid fa-envelope"></i> 108077</p>
     </div>
   </div>
 
@@ -178,7 +178,7 @@ body {
 
   <!-- Apply Leave Button -->
   <div class="text-center">
-    <a href="apply-leave.php" class="btn btn-primary btn-lg px-4">
+    <a href="#" class="btn btn-primary btn-lg px-4">
       <i class="fa-solid fa-paper-plane me-2"></i> Apply for Leave
     </a>
   </div>
