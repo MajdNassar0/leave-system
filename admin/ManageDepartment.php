@@ -52,11 +52,11 @@
             <table >
             <thead>
               <tr>
-                <th onclick="sortTable(0)" width="100px">Sr no</th>
-                <th onclick="sortTable(1)" width="250px">Dept Name</th>
-                <th onclick="sortTable(2)" width="200px">Dept Short Name</th>
-                <th onclick="sortTable(3)" width="200px">Dept Code</th>
-                <th onclick="sortTable(4)" width="200px">Creation Date</th>
+                <th  width="100px">Sr no</th>
+                <th  width="250px">Dept Name</th>
+                <th  width="200px">Dept Short Name</th>
+                <th  width="200px">Dept Code</th>
+                <th  width="200px">Creation Date</th>
                 <th>Action</th>
               </tr>
             </thead>

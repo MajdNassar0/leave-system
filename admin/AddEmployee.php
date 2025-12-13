@@ -21,8 +21,8 @@ if(isset($_POST['submit'])){
     $Email          = $_POST['email'];
     $City           = $_POST['city'];
     $Country        = $_POST['country'];
-    $Password       = md5($_POST['password']);
-    $ConfirmPassword= md5($_POST['confirmPassword']);
+    $Password       = $_POST['password'];
+    $ConfirmPassword= $_POST['confirmPassword'];
     $Mobile         = $_POST['mobile'];
 
     // تحقق من مطابقة الباسورد
@@ -106,17 +106,17 @@ if(isset($_POST['submit'])){
 
           <!-- رسائل الخطأ أو النجاح -->
           <?php if(isset($error)){ ?>
-              <div class="alert alert-danger"><?php echo htmlentities($error); ?></div>
+              <div class="alert alert-danger"><?php echo $error; ?></div>
           <?php } ?>
           <?php if(isset($msg)){ ?>
-              <div class="alert alert-success"><?php echo htmlentities($msg); ?></div>
+              <div class="alert alert-success"><?php echo $msg; ?></div>
           <?php } ?>
 
           <form action="" method="POST">
             <div class="row">
 
               <div class="form-group w-50">
-                <label for="employeeCode">Employee Code (Must be unique)</label>
+                <label for="employeeCode">Employee Code </label>
                 <input type="text" id="employeeCode" name="employeeCode" required>
               </div>
 
@@ -196,7 +196,7 @@ if(isset($_POST['submit'])){
     </section>
   </main>
 
-  <!-- JS -->
+  <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

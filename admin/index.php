@@ -2,29 +2,34 @@
 session_start();
 include('includes/config.php');
 
-if(isset($_POST['signin']))
-{
-$uname=$_POST['username'];
-$password=md5($_POST['password']);
-$sql ="SELECT UserName,Password FROM admin WHERE UserName=:uname and Password=:password";
-$query= $dbh -> prepare($sql);
-$query-> bindParam(':uname', $uname, PDO::PARAM_STR);
-$query-> bindParam(':password', $password, PDO::PARAM_STR);
-$query-> execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-if($query->rowCount() > 0)
-{
-$_SESSION['alogin']=$_POST['username'];
-echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
-} else{
-  
-  echo "<script>alert('Invalid Details');</script>";
+if (isset($_POST['signin'])) {
 
+    $uname = $_POST['username'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT UserName, Password 
+            FROM admin 
+            WHERE UserName = :uname 
+              AND Password = :password";
+
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':uname', $uname, PDO::PARAM_STR);
+    $query->bindParam(':password', $password, PDO::PARAM_STR);
+    $query->execute();
+
+    $user = $query->fetch(PDO::FETCH_OBJ);
+
+    if ($user) {
+        $_SESSION['alogin'] = $user->UserName;
+
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        echo "<script>alert('Invalid Details');</script>";
+    }
 }
-
-}
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,7 +51,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
          
    
     <div
-      class="loginPage mainContent col-md-12 d-flex flex-wrap flex-column justify-content-center align-items-center" style="background-image: url('../assets/img/Network.jpeg');"
+      class="loginPage  col-md-12 d-flex flex-wrap flex-column justify-content-center align-items-center" style="background-image: url('../assets/img/Network.jpeg');"
     >
       <div>
         <h3 style="color: #4c4b4cff">Employee Leave Management System </h3>
@@ -54,14 +59,13 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
       </div>
       <div class="login d-flex flex-wrap flex-column gap-4 p-4">
         <h4 style="color: #8b868b">SIGN IN</h4>
-        <form action="" method="POST">
-          <form action="" method="POST">
-    <input type="text" placeholder="Username" name="username" />
-    <input type="password" placeholder="Password" name="password" />
-    <input type="submit" value="SIGN IN" name="signin" class="waves-effect waves-light btn teal text-white" />
-</form>
 
-        </form>
+          <form action="" method="POST">
+            <input type="text" placeholder="Username" name="username" />
+            <input type="password" placeholder="Password" name="password" />
+            <input type="submit" value="SIGN IN" name="signin" class="waves-effect waves-light btn teal text-white" />
+          </form>
+
       </div>
     </div>
         <!-- bootstrap -->

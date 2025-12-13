@@ -90,7 +90,7 @@ if (isset($_GET['delid'])) {
                 <table class="table align-middle">
                     <thead>
                         <tr>
-                            <th>Sr no</th>
+                            <th>no</th>
                             <th>Emp Id</th>
                             <th>Full Name</th>
                             <th>Department</th>

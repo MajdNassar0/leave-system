@@ -29,15 +29,12 @@
   </head>
   <body>
 
-     <?php
-        include 'includes/head.php';
-                  
-          
-        ?>
+    <!-- header -->
+     <?php include 'includes/head.php';?>
 
     <!-- main log-in -->
     <main>
-      <div class="container-fluid">
+  <div class="container-fluid">
   <div class="row">
 
     <!-- SIDE NAV -->
@@ -68,7 +65,7 @@
         <div class="card-content">
           <span class="card-title" style="font-size: 20px">Employee Login</span>
 
-          <form class="col" name="signin" method="post">
+          <form action="" name="signin" method="post">
             <div class="input-field">
               <label for="username">Email Id :</label>
               <input id="username" type="text" name="username" placeholder="Enter your email" required />
@@ -81,7 +78,7 @@
 
               <div class="right-align m-t-sm">
               <button type="submit" name="signin" class="waves-effect waves-light btn teal text-white">
-                 <a href="" class="text-white" style="text-decoration: none;">Sign in</a>
+                 <a href="./employee/index.php" class="text-white" style="text-decoration: none;">Sign in</a>
               </button>
             </div>
           </form>

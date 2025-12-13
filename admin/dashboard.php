@@ -34,7 +34,6 @@ if(strlen($_SESSION['alogin'])==0){
     <main>
   <section>
 
-    <div class="wrapper d-flex">
 
       <!-- Sidebar -->
       <?php include('includes/sidebar.php'); ?>
@@ -53,7 +52,7 @@ if(strlen($_SESSION['alogin'])==0){
                 $sql = "SELECT id FROM tblemployees";
                 $query = $dbh->prepare($sql);
                 $query->execute();
-                echo htmlentities($query->rowCount());
+                echo $query->rowCount();
                 ?>
               </h3>
             </div>
@@ -68,7 +67,7 @@ if(strlen($_SESSION['alogin'])==0){
                 $sql = "SELECT id FROM tbldepartments";
                 $query = $dbh->prepare($sql);
                 $query->execute();
-                echo htmlentities($query->rowCount());
+                echo $query->rowCount();
                 ?>
               </h3>
             </div>
@@ -83,7 +82,7 @@ if(strlen($_SESSION['alogin'])==0){
                 $sql = "SELECT id FROM tblleavetype";
                 $query = $dbh->prepare($sql);
                 $query->execute();
-                echo htmlentities($query->rowCount());
+                echo $query->rowCount();
                 ?>
               </h3>
             </div>
@@ -98,7 +97,7 @@ if(strlen($_SESSION['alogin'])==0){
                 $sql = "SELECT id FROM tblleaves";
                 $query = $dbh->prepare($sql);
                 $query->execute();
-                echo htmlentities($query->rowCount());
+                echo $query->rowCount();
                 ?>
               </h3>
             </div>
@@ -113,7 +112,7 @@ if(strlen($_SESSION['alogin'])==0){
                 $sql = "SELECT id FROM tblleaves WHERE Status=1";
                 $query = $dbh->prepare($sql);
                 $query->execute();
-                echo htmlentities($query->rowCount());
+                echo $query->rowCount();
                 ?>
               </h3>
             </div>
@@ -128,87 +127,16 @@ if(strlen($_SESSION['alogin'])==0){
                 $sql = "SELECT id FROM tblleaves WHERE Status=0";
                 $query = $dbh->prepare($sql);
                 $query->execute();
-                echo htmlentities($query->rowCount());
+                echo $query->rowCount();
                 ?>
               </h3>
             </div>
           </div>
 
-        </div> <!-- row -->
+        </div> 
 
-        <!-- Latest Leaves Table -->
-        <div class="table-box mt-4">
-          <h4 class="table-title">LATEST LEAVE APPLICATIONS</h4>
+      </div> 
 
-          <div class="table-responsive">
-            <table class="custom-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Employee Name</th>
-                  <th>Leave Type</th>
-                  <th>Posting Date</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <?php
-                $sql = "SELECT tblleaves.id as lid, tblemployees.FirstName,
-                        tblemployees.LastName, tblemployees.EmpId, tblemployees.id,
-                        tblleaves.LeaveType, tblleaves.PostingDate, tblleaves.Status
-                        FROM tblleaves
-                        JOIN tblemployees ON tblleaves.empid=tblemployees.id
-                        ORDER BY lid DESC LIMIT 6";
-
-                $query = $dbh->prepare($sql);
-                $query->execute();
-                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                $cnt=1;
-
-                if($query->rowCount() > 0){
-                  foreach($results as $result){
-                ?>
-                <tr>
-                  <td><?php echo htmlentities($cnt); ?></td>
-
-                  <td>
-                    <?php echo htmlentities($result->FirstName . " " . $result->LastName); ?>
-                    (<?php echo htmlentities($result->EmpId); ?>)
-                  </td>
-
-                  <td><?php echo htmlentities($result->LeaveType); ?></td>
-                  <td><?php echo htmlentities($result->PostingDate); ?></td>
-
-                  <td>
-                    <?php 
-                    if($result->Status==1){
-                      echo '<span class="approved">Approved</span>';
-                    } elseif($result->Status==2){
-                      echo '<span class="rejected">Not Approved</span>';
-                    } else {
-                      echo '<span class="pending">Waiting</span>';
-                    }
-                    ?>
-                  </td>
-
-                  <td>
-                    <a class="btn-view" 
-                       href="leave-details.php?leaveid=<?php echo htmlentities($result->lid); ?>">
-                      VIEW DETAILS
-                    </a>
-                  </td>
-                </tr>
-                <?php $cnt++; }} ?>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </div> <!-- end content -->
-
-    </div> <!-- end wrapper -->
 
   </section>
 </main>

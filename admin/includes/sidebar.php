@@ -1,7 +1,30 @@
 <div class="sidebar p-3">
-    <div class="img">
-        <img src="../assets/img/image.png" class="">
-    </div>
+
+<div class="img text-center">
+
+    <label for="profileImage" class="profile-upload">
+        <img src="../uploads/<?php echo $_SESSION['admin_image'] ?? '../assets/img/image.png'; ?>"
+             class="rounded-circle"
+             width="120" height="120">
+        <div class="upload-overlay">
+            <i class="bi bi-camera-fill"></i>
+        </div>
+    </label>
+
+    <form action="./upload_profile.php" method="post" enctype="multipart/form-data">
+        <input type="file"
+               name="profile_image"
+               id="profileImage"
+               hidden
+               accept=".jpg,.jpeg,.png"
+               onchange="this.form.submit()">
+    </form>
+
+</div>
+
+
+
+
     <div class="mb-3">
         <h5 class=" mt-2 ">Admin</h5>
     </div>
@@ -78,7 +101,7 @@
     </div>
 
     <div class="menu-item text-danger mb-2 p-5">
-        <a href="#" class="text-black  ">
+        <a href="../index.php" class="text-black  ">
             <i class="bi bi-box-arrow-right me-2"></i> Sign Out
         </a>
     </div>
